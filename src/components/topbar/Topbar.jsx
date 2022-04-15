@@ -2,9 +2,9 @@ import React from 'react'
 import "./topbar.scss"
 import { Person, Mail } from "@material-ui/icons"
 
-function Topbar() {
+function Topbar({ menuOpen, setMenuOpen }) {
     return (
-        <div className='topbar'>
+        <div className={'topbar ' + (menuOpen && "active")}>
             <div className='wrapper'>
                 <div className='left'>
                     <a href='#intro' className='logo'>Mr. Vogt</a>
@@ -18,7 +18,11 @@ function Topbar() {
                     </div>
                 </div>
                 <div className='right'>
-                    this is right
+                    <div className='hamburgerIcon'>
+                        <span className='line1'></span>
+                        <span className='line2'></span>
+                        <span className='line3'></span>
+                    </div>
                 </div>
             </div>
         </div>
